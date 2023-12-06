@@ -26,7 +26,9 @@ public class Ex06_WhileEx {
             }else {
                 run = false;
                 System.out.println("입력한 숫자는 " + sum + "개 입니다.");
-                double num3 = num2 / sum;
+                double num4 = num2;
+                double sum2 = sum;
+                double num3 = num4 / sum2;
                 System.out.println("평균은 " + num3 + " 입니다.");
             }
 
