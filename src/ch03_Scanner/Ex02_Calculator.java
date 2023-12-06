@@ -2,7 +2,8 @@ package ch03_Scanner;
 
 import java.util.Scanner;
 
-public class Ex02_Calculator {
+public class
+Ex02_Calculator {
 
 	public static void main(String[] args) {
 		/**

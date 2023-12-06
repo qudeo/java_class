@@ -37,7 +37,7 @@ public class Ex01_WhileBasic {
             System.out.println("l = " + l);
             l++;
             if (l == 3) {
-                run = false; 
+                run = false;
             }
             System.out.println("run= false 다음 문장");
 
