@@ -15,9 +15,9 @@ public class Ex03_ArrayEx {
         int[] numbers1 = new int[3];
         int sum = 0;
         int sum2 = 0;
-        for (int j = 0; j < numbers1.length; j++){
-            numbers1[j] = scanner.nextInt();
-            sum = sum + numbers1[j];
+        for (int i = 0; i < numbers1.length; i++){
+            numbers1[i] = scanner.nextInt();
+            sum = sum + numbers1[i];
             sum2 = sum / numbers1.length;
         }
         System.out.println(sum);
