@@ -14,6 +14,5 @@ public class StudentMain {
         // 매개변수 3개 있는 생성자로 객체 선언
         Student student4 = new Student("이름1", "교육", "333-3333-3333");
 
-
     }
 }
