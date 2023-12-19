@@ -67,7 +67,7 @@ public class BoardService {
             System.out.println("요청하신 게시글은 존재하지 않습니다.");
             }
         }
-    }
+
 
     public void delete() {
         System.out.print("수정할 글의 Id를 입력하세요 > ");
