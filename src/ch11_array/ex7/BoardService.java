@@ -95,4 +95,15 @@ public class BoardService {
             System.out.println("검색 결과가 없습니다.");
         }
     }
+    // 목록 출력 전용 메서드
+    // findAll, search
+    private void listPrint(List<BoardDTO> boardDTOList)  {
+    }
+
+    public void testData() {
+        for (int i = 0; i < 11; i++) {
+            BoardDTO boardDTO = new BoardDTO("title"+i, "writer"+i, "1234", "contents"+i);
+            boardRepository.save(boardDTO);
+        }
+    }
 }

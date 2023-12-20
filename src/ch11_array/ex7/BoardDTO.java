@@ -1,5 +1,8 @@
 package ch11_array.ex7;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class BoardDTO {
     private Long id;
     private String boardTitle;
@@ -7,6 +10,7 @@ public class BoardDTO {
     private String boardContents;
     private String boardPass;
     private int boardHits;
+    private String createdAt;
 
     public void plusHits() {
         boardHits++;
@@ -60,6 +64,14 @@ public class BoardDTO {
         this.boardHits = boardHits;
     }
 
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
     public BoardDTO() {
     }
 
@@ -71,6 +83,7 @@ public class BoardDTO {
         this.boardWriter = boardWriter;
         this.boardContents = boardContents;
         this.boardPass = boardPass;
+        this.createdAt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
     @Override
@@ -79,7 +92,10 @@ public class BoardDTO {
                 "id=" + id +
                 ", boardTitle='" + boardTitle + '\'' +
                 ", boardWriter='" + boardWriter + '\'' +
-                ", boardHits='" + boardHits + '\'' +
+                ", boardContents='" + boardContents + '\'' +
+                ", boardPass='" + boardPass + '\'' +
+                ", boardHits=" + boardHits +
+                ", createdAt='" + createdAt + '\'' +
                 '}';
     }
 }
