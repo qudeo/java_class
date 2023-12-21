@@ -27,9 +27,9 @@ public class MainController {
             } else if (SelectNo == 4) {
                 memberService.update();
             } else if (SelectNo == 5) {
-                memberService.secession();
+                memberService.delete();
             } else if (SelectNo == 6) {
-
+                memberService.logout();
             } else if (SelectNo == 7) {
                 while (run) {
                     System.out.println("==============================================================================");
