@@ -6,6 +6,7 @@ import java.util.List;
 public class BankRepository {
     private static List<ClientDTO> clientDTOList = new ArrayList<>();
     private static List<AccountDTO> accountDTOList = new ArrayList<>();
+    private static List<AccountDTO> accountHistoryList = new ArrayList<>();
     public boolean NumberCheck(String number) {
         boolean result = false;
         for (int i = 0; i < clientDTOList.size(); i++) {
@@ -17,6 +18,7 @@ public class BankRepository {
     }
 
     public boolean save(ClientDTO clientDTO) {
+
         return clientDTOList.add(clientDTO);
     }
 
@@ -38,6 +40,9 @@ public class BankRepository {
                 money = deposit + clientDTOList.get(i).getBalance();
                 clientDTOList.get(i).setBalance(money);
                 clientDTO = clientDTOList.get(i);
+                AccountDTO accountDTO = new AccountDTO(number, deposit, 0);
+                accountDTOList.add(accountDTO);
+
             }
         }
         return clientDTO;
@@ -53,6 +58,8 @@ public class BankRepository {
                     money -= withdraw;
                     clientDTOList.get(i).setBalance(money);
                     clientDTO = clientDTOList.get(i);
+                    AccountDTO accountDTO = new AccountDTO(number, 0, withdraw);
+                    accountDTOList.add(accountDTO);
                 }
             }
         }
@@ -68,5 +75,14 @@ public class BankRepository {
         }
         return result;
 
+    }
+
+    public List<AccountDTO> findAll(String num) {
+        for (int i = 0; i < accountDTOList.size(); i++) {
+            if (num.equals(accountDTOList.get(i).getAccountNumber())) {
+                accountHistoryList.add(accountDTOList.get(i));
+            }
+        }
+        return accountHistoryList;
     }
 }

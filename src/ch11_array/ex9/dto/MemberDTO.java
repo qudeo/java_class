@@ -1,4 +1,7 @@
-package my.ex2;
+package ch11_array.ex9.dto;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class MemberDTO {
     private Long id;
@@ -6,6 +9,7 @@ public class MemberDTO {
     private String memberPassword;
     private String memberName;
     private String memberMobile;
+    private String createdAt;
 
     public Long getId() {
         return id;
@@ -47,6 +51,13 @@ public class MemberDTO {
         this.memberMobile = memberMobile;
     }
 
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
     private static Long idValue = 1L;
     public MemberDTO() {
     }
@@ -57,6 +68,7 @@ public class MemberDTO {
         this.memberPassword = memberPassword;
         this.memberName = memberName;
         this.memberMobile = memberMobile;
+        this.createdAt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
     @Override
@@ -67,6 +79,7 @@ public class MemberDTO {
                 ", memberPassword='" + memberPassword + '\'' +
                 ", memberName='" + memberName + '\'' +
                 ", memberMobile='" + memberMobile + '\'' +
+                ", createdAt='" + createdAt + '\'' +
                 '}';
     }
 }

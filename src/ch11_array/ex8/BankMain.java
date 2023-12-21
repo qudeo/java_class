@@ -16,7 +16,7 @@ public class BankMain {
             System.out.print("원하시는 메뉴를 선택하세요 : ");
             SelectNo = scanner.nextInt();
             if (SelectNo == 1) {
-                bankService.save();
+                bankService.save1();
             } else if (SelectNo == 2) {
                 bankService.list();
             } else if (SelectNo == 3) {

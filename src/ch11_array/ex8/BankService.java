@@ -1,12 +1,13 @@
 package ch11_array.ex8;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class BankService {
     Scanner scanner = new Scanner(System.in);
     BankRepository bankRepository = new BankRepository();
 
-    public void save() {
+    public void save1() {
         long balance = 0;
         boolean checkResult = false;
         String Number = null;
@@ -70,7 +71,7 @@ public class BankService {
         System.out.print("출금하려는 계좌의 번호를 입력하세요 : ");
         String Number = scanner.next();
         boolean checkResult = bankRepository.NumberCheck(Number);
-        System.out.println("비밀번호를 입력하세요 : ");
+        System.out.print("비밀번호를 입력하세요 : ");
         String Pass = scanner.next();
         boolean checkResult2 = bankRepository.PassCheck(Pass);
         if (checkResult && checkResult2) {
@@ -89,6 +90,30 @@ public class BankService {
     }
 
     public void dwList() {
+        System.out.print("계좌번호를 입력하세요 : ");
+        String Num = scanner.next();
+        int Select = 0;
+        boolean CheckResult = bankRepository.NumberCheck(Num);
+        while (CheckResult) {
+            System.out.println("=========================================");
+            System.out.println("1.모든내역 | 2.입금내역 | 3.출금내역 | 4.종료");
+            System.out.println("=========================================");
+            System.out.println("원하시는 메뉴를 선택하세요 : ");
+            Select = scanner.nextInt();
 
+            if (Select == 1) {
+                List<AccountDTO> accountDTOList = bankRepository.findAll(Num);
+                System.out.print(accountDTOList);
+
+            } else if (Select == 2) {
+
+            } else if (Select == 3) {
+
+            } else if (Select == 4) {
+
+            } else {
+                System.out.println("메뉴에서 벗어난 값입니다.");
+            }
+        }
     }
 }

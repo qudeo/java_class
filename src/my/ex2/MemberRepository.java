@@ -9,4 +9,24 @@ public class MemberRepository {
         boolean result = memberDTOList.add(memberDTO);
         return result;
     }
+
+    public boolean emailCheck(String memberEmail) {
+        boolean result = true;
+        for (int i = 0; i < memberDTOList.size(); i++) {
+            if (memberEmail.equals(memberDTOList.get(i).getMemberEmail())) {
+                result = false;
+            }
+        }
+        return result;
+    }
+
+    public boolean nameCheck(String memberName) {
+        boolean result = false;
+        for (int i = 0; i < memberDTOList.size(); i++) {
+            if (memberName.equals(memberDTOList.get(i).getMemberName())) {
+                result = true;
+            }
+        }
+        return result;
+    }
 }
