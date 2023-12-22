@@ -8,7 +8,7 @@ public class BoardDTO {
     private String boardTitle;
     private String boardWriter;
     private String boardContents;
-    private String memberMobile;
+    private int boardHits;
     private String createdAt;
 
     public Long getId() {
@@ -43,12 +43,12 @@ public class BoardDTO {
         this.boardContents = boardContents;
     }
 
-    public String getMemberMobile() {
-        return memberMobile;
+    public int getBoardHits() {
+        return boardHits;
     }
 
-    public void setMemberMobile(String memberMobile) {
-        this.memberMobile = memberMobile;
+    public void setBoardHits(int boardHits) {
+        this.boardHits = boardHits;
     }
 
     public String getCreatedAt() {
@@ -59,17 +59,28 @@ public class BoardDTO {
         this.createdAt = createdAt;
     }
 
+    public static Long getIdValue() {
+        return idValue;
+    }
+
+    public static void setIdValue(Long idValue) {
+        BoardDTO.idValue = idValue;
+    }
+
+    public void plusHits() {
+        boardHits++;
+    }
+
     private static Long idValue = 1L;
 
     public BoardDTO() {
     }
 
-    public BoardDTO(String boardTitle, String boardWriter, String boardContents, String memberMobile) {
+    public BoardDTO(String boardTitle, String boardWriter, String boardContents) {
         this.id = idValue++;
         this.boardTitle = boardTitle;
         this.boardWriter = boardWriter;
         this.boardContents = boardContents;
-        this.memberMobile = memberMobile;
         this.createdAt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
@@ -80,8 +91,9 @@ public class BoardDTO {
                 ", boardTitle='" + boardTitle + '\'' +
                 ", boardWriter='" + boardWriter + '\'' +
                 ", boardContents='" + boardContents + '\'' +
-                ", memberMobile='" + memberMobile + '\'' +
+                ", boardHits=" + boardHits +
                 ", createdAt='" + createdAt + '\'' +
                 '}';
     }
 }
+

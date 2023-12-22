@@ -102,6 +102,7 @@ public class MemberService {
     public void logout() {
         if (CommonVariables.loginEmail != null) {
             CommonVariables.loginEmail = null;
+            System.out.println("로그아웃되었습니다.");
         }
     }
 }
