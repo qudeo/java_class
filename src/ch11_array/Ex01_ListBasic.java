@@ -1,7 +1,9 @@
 package ch11_array;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Ex01_ListBasic {
     public static void main(String[] args) {
@@ -52,8 +54,13 @@ public class Ex01_ListBasic {
             System.out.println(strList.get(i));
         }
 
-
-
+        Map<Long, String> map3 = new HashMap<>();
+        String ss1 = map3.put(1L, "안녕");
+        System.out.println("ss1 = " + ss1); // null
+        String ss2 = map3.put(2L, "hello");
+        System.out.println("ss2 = " + ss2); // null
+        String ss3 = map3.put(1L, "안녕하세요");
+        System.out.println("ss3 = " + ss3); // 안녕
 
     }
 }
