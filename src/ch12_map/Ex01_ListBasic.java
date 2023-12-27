@@ -1,4 +1,4 @@
-package ch11_array;
+package ch12_map;
 
 import java.util.ArrayList;
 import java.util.HashMap;
