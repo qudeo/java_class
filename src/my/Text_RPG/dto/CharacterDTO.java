@@ -1,17 +1,19 @@
 package my.Text_RPG.dto;
 
-import java.util.List;
+import my.Text_RPG.repository.Character;
 
-public class CharacterDTO {
-    private String name = "외노자";
-    private int maxHp;
-    private int maxMp;
-    int hp;
-    private int mp;
-    private int att;
-    private int def;
-    private int level;
-    private int exp;
+public class CharacterDTO extends Character {
+//    Monster1DTO monster1DTO = new Monster1DTO();
+
+    public String name = "외노자";
+    public int maxHp = 30;
+    public int maxMp = 30;
+    public int hp = 30;
+    public int mp = 30;
+    public int att = 5;
+    public int def = 5;
+    public int level = 1;
+    public int exp;
 
     public String getName() {
         return name;
@@ -89,7 +91,7 @@ public class CharacterDTO {
     }
 
     public CharacterDTO(String name, int maxHp, int maxMp, int hp, int mp, int att, int def, int level, int exp) {
-        this.name = name;
+        this.name = "외노자";
         this.maxHp = maxHp;
         this.maxMp = maxMp;
         this.hp = hp;
@@ -99,5 +101,14 @@ public class CharacterDTO {
         this.level = 1;
         this.exp = 0;
     }
-
+//    public int attack() {
+//        return att;
+//    }
+//    public void attacked (int sum) {
+//        if (def >= sum) {
+//            hp = hp - 0;
+//        } else {
+//            hp = hp + def - sum;
+//        }
+//    }
 }

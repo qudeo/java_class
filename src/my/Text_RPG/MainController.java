@@ -2,6 +2,7 @@ package my.Text_RPG;
 
 import my.Text_RPG.common.CommonVariables;
 import my.Text_RPG.dto.CharacterDTO;
+import my.Text_RPG.dto.Nodongja;
 import my.Text_RPG.service.*;
 
 import java.io.IOException;
@@ -12,10 +13,9 @@ public class MainController {
     public static void main(String[] args) {
         MemberService memberService = new MemberService();
         ClassService classService = new ClassService();
-        GameService gameService = new GameService();
-        ShopService shopService = new ShopService();
         CharacterService characterService = new CharacterService();
         CharacterDTO characterDTO = new CharacterDTO();
+        BattleService battleService = new BattleService();
 
         Scanner scanner = new Scanner(System.in);
         int Select = 0;
@@ -49,6 +49,7 @@ public class MainController {
                         System.out.print("선택 > ");
                         Select = scanner.nextInt();
                         if (Select == 1) {
+                            Nodongja nodongja = new Nodongja();
                             System.out.println("== 직업목록 ==");
                             System.out.println("");
                             System.out.println("1.외노자");
@@ -67,6 +68,7 @@ public class MainController {
                             Select = scanner.nextInt();
                             if (Select == 1) {
                                 boolean run3 = true;
+                                    CharacterDTO characterDTO1 = new CharacterDTO();
                                 while (run3) {
                                     System.out.println("================================================================================");
                                     System.out.println("1.전투 | 2.상점 | 3.휴식 | 4.캐릭터정보 | 5.아이템 | 6.직업정보 | 7.전 페이지로 돌아갑니다");
@@ -74,17 +76,17 @@ public class MainController {
                                     System.out.print("선택 > ");
                                     Select = scanner.nextInt();
                                     if (Select == 1) {
-
+                                        battleService.Battle();
                                     } else if (Select == 2) {
-
+                                        System.out.println("상점이 무너져 있습니다..");
                                     } else if (Select == 3) {
 
                                     } else if (Select == 4) {
                                         characterService.status();
                                     } else if (Select == 5) {
-
+                                        System.out.println("가방이 없어서 열리지 않습니다.");
                                     } else if (Select == 6) {
-
+                                        classService.information();
                                     } else if (Select == 7) {
                                         run3 = false;
                                     } else {
