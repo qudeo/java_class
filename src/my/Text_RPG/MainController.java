@@ -1,17 +1,21 @@
 package my.Text_RPG;
 
 import my.Text_RPG.common.CommonVariables;
+import my.Text_RPG.dto.CharacterDTO;
 import my.Text_RPG.service.*;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class MainController {
+
     public static void main(String[] args) {
         MemberService memberService = new MemberService();
         ClassService classService = new ClassService();
         GameService gameService = new GameService();
         ShopService shopService = new ShopService();
         CharacterService characterService = new CharacterService();
+        CharacterDTO characterDTO = new CharacterDTO();
 
         Scanner scanner = new Scanner(System.in);
         int Select = 0;

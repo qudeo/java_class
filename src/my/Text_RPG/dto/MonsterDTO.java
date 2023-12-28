@@ -1,17 +1,13 @@
 package my.Text_RPG.dto;
 
-import java.util.List;
-
-public class CharacterDTO {
-    private String name = "외노자";
+public class MonsterDTO {
+    private String name;
     private int maxHp;
     private int maxMp;
-    int hp;
+    private int hp;
     private int mp;
     private int att;
     private int def;
-    private int level;
-    private int exp;
 
     public String getName() {
         return name;
@@ -69,26 +65,10 @@ public class CharacterDTO {
         this.def = def;
     }
 
-    public int getLevel() {
-        return level;
+    public MonsterDTO() {
     }
 
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public int getExp() {
-        return exp;
-    }
-
-    public void setExp(int exp) {
-        this.exp = exp;
-    }
-
-    public CharacterDTO() {
-    }
-
-    public CharacterDTO(String name, int maxHp, int maxMp, int hp, int mp, int att, int def, int level, int exp) {
+    public MonsterDTO(String name, int maxHp, int maxMp, int hp, int mp, int att, int def) {
         this.name = name;
         this.maxHp = maxHp;
         this.maxMp = maxMp;
@@ -96,8 +76,5 @@ public class CharacterDTO {
         this.mp = mp;
         this.att = att;
         this.def = def;
-        this.level = 1;
-        this.exp = 0;
     }
-
 }

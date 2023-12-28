@@ -1,16 +1,16 @@
 package my.Text_RPG.service;
 
 import my.Text_RPG.dto.CharacterDTO;
+import my.Text_RPG.repository.CharacterRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CharacterService {
-CharacterDTO characterDTO = new CharacterDTO();
-List<CharacterDTO> characterDTOList = new ArrayList<>();
+CharacterRepository characterRepository = new CharacterRepository();
+
     public void status() {
-        System.out.println("== 캐릭터정보 ==");
-        System.out.println("직업 : " + characterDTOList.get());
-        System.out.println("레벨 : " + level + "");
+        List<CharacterDTO> characterDTOList = characterRepository.attack();
+
     }
 }
