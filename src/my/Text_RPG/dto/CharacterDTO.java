@@ -1,8 +1,6 @@
 package my.Text_RPG.dto;
 
-import my.Text_RPG.repository.Character;
-
-public class CharacterDTO extends Character {
+public class CharacterDTO {
 
     public String name = "외노자";
     public int maxHp = 30;

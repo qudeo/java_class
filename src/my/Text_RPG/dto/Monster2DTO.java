@@ -1,12 +1,12 @@
 package my.Text_RPG.dto;
 
-public class Monster1DTO {
-    public String name = "악덕사장";
+public class Monster2DTO {
+    public String name = "반달가슴곰";
     public int maxHp = 10;
     public int maxMp;
-    public int hp = 10;
+    public int hp = 30;
     public int mp;
-    public int att = 10;
+    public int att = 29;
     public int def;
 
     public String getName() {
@@ -65,11 +65,11 @@ public class Monster1DTO {
         this.def = def;
     }
 
-    public Monster1DTO() {
+    public Monster2DTO() {
     }
 
-    public Monster1DTO(String name, int maxHp, int maxMp, int hp, int mp, int att, int def) {
-        this.name = "악덕사장";
+    public Monster2DTO(String name, int maxHp, int maxMp, int hp, int mp, int att, int def) {
+        this.name = "반달가슴곰";
         this.maxHp = 10;
         this.maxMp = maxMp;
         this.hp = hp;

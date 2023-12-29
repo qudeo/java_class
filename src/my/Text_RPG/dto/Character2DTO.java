@@ -1,13 +1,16 @@
 package my.Text_RPG.dto;
 
-public class Monster1DTO {
-    public String name = "악덕사장";
-    public int maxHp = 10;
-    public int maxMp;
-    public int hp = 10;
-    public int mp;
-    public int att = 10;
-    public int def;
+public class Character2DTO {
+
+    public String name = "외노자";
+    public int maxHp = 30;
+    public int maxMp = 30;
+    public int hp = 30;
+    public int mp = 30;
+    public int att = 1;
+    public int def = 5;
+    public int level = 1;
+    public int exp;
 
     public String getName() {
         return name;
@@ -65,17 +68,34 @@ public class Monster1DTO {
         this.def = def;
     }
 
-    public Monster1DTO() {
+    public int getLevel() {
+        return level;
     }
 
-    public Monster1DTO(String name, int maxHp, int maxMp, int hp, int mp, int att, int def) {
-        this.name = "악덕사장";
-        this.maxHp = 10;
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getExp() {
+        return exp;
+    }
+
+    public void setExp(int exp) {
+        this.exp = exp;
+    }
+
+    public Character2DTO() {
+    }
+
+    public Character2DTO(String name, int maxHp, int maxMp, int hp, int mp, int att, int def, int level, int exp) {
+        this.name = "외노자";
+        this.maxHp = maxHp;
         this.maxMp = maxMp;
         this.hp = hp;
         this.mp = mp;
         this.att = att;
         this.def = def;
+        this.level = 1;
+        this.exp = 0;
     }
-
 }

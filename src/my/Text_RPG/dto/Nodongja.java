@@ -1,7 +1,5 @@
 package my.Text_RPG.dto;
 
-import my.Text_RPG.repository.Character;
-
 import java.util.Scanner;
 
 public class Nodongja extends CharacterDTO {
