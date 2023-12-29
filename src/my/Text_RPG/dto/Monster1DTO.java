@@ -7,7 +7,7 @@ public class Monster1DTO {
     public int maxMp;
     public int hp = 10;
     public int mp;
-    public int att;
+    public int att = 10;
     public int def;
 
     public String getName() {

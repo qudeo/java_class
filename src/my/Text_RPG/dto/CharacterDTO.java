@@ -3,7 +3,6 @@ package my.Text_RPG.dto;
 import my.Text_RPG.repository.Character;
 
 public class CharacterDTO extends Character {
-//    Monster1DTO monster1DTO = new Monster1DTO();
 
     public String name = "외노자";
     public int maxHp = 30;
@@ -101,14 +100,4 @@ public class CharacterDTO extends Character {
         this.level = 1;
         this.exp = 0;
     }
-//    public int attack() {
-//        return att;
-//    }
-//    public void attacked (int sum) {
-//        if (def >= sum) {
-//            hp = hp - 0;
-//        } else {
-//            hp = hp + def - sum;
-//        }
-//    }
 }

@@ -5,7 +5,6 @@ import my.Text_RPG.dto.CharacterDTO;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class CharacterService {
     List<CharacterDTO> characterDTOList = new ArrayList<>();
